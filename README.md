@@ -19,9 +19,9 @@ Sample URI: (JSON)
 http://ngiriraj.com/pincode_api/json/632601/t/1
 
 Sample Output:
-
+<pre>
 {"Records":154724,"Matched":1,"Fields":["OFFICENAME","TALUK","DISTRICTNAME","STATENAME","PINCODE"],"data":[["Thattaparai B.O","Gudiyattam","Vellore","TAMIL NADU","632601"]]}  
-
+</pre>
 
 Sample URI: (XML)
 http://ngiriraj.com/pincode_api/xml/632601/d
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `postpin` (
 </pre>
 
 If you have any issues in full data import based on size, simple split the files and import it.
-
+<pre>
 #!/bin/bash
 for (( c=1; c<=154726; c+=10000 ))
 do
@@ -57,4 +57,4 @@ do
         d=$(($c + 10000))
         sed -n "$c,$d p" all_india_pin_code.csv > fs_$c.csv;
 done
-
+</pre>
