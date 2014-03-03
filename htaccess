@@ -1,0 +1,11 @@
+Options +FollowSymlinks -Multiviews
+
+RewriteEngine on
+
+RewriteCond $1 !=index.php
+
+RewriteRule ^([^/]*)$ /pincode_api/index.php?type=$1 [L]
+RewriteRule ^([^/]*)/([^/]*)$ /pincode_api/index.php?type=$1&pincode=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)$ /pincode_api/index.php?type=$1&pincode=$2&location=$3 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /pincode_api/index.php?type=$1&pincode=$2&location=$3&limit=$4 [L]
+
