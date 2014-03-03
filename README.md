@@ -33,7 +33,7 @@ Source Data:
 http://data.gov.in/sites/default/files/all_india_pin_code.csv
 
 Create Table:
-
+<pre>
 CREATE TABLE IF NOT EXISTS `postpin` (
   `OFFICENAME` varchar(256) NOT NULL,
   `PINCODE` mediumint(9) NOT NULL,
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `postpin` (
   `DISTRICTNAME` varchar(256) DEFAULT NULL,
   `STATENAME` varchar(100) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='All india postal pincode directory';
+</pre>
 
 If you have any issues in full data import based on size, simple split the files and import it.
 
